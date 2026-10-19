@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20/10 - Lớp 10C</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #713653;
+    background: linear-gradient(135deg, #fff0f6, #ffdce9, #fff7fb);
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 25px 16px 40px;
+    animation: appear .5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+#page1.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card, .header {
+    background: rgba(255,255,255,.88);
+    border: 1px solid white;
+    border-radius: 28px;
+    box-shadow: 0 12px 40px #bd47771c;
+}
+
+.card {
+    width: min(760px, 100%);
+    padding: clamp(30px, 6vw, 60px) 22px;
+}
+
+h1 {
+    color: #c02f76;
+    font-size: clamp(34px, 7vw, 64px);
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.decor {
+    font-size: 34px;
+    margin: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    padding: 15px 26px;
+    color: white;
+    background: linear-gradient(135deg, #f06ba8, #c8327a);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 7px 20px #d95b9633;
+    transition: .2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+.subtitle {
+    color: #cf5790;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.header {
+    padding: clamp(28px, 5vw, 55px) 22px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: clamp(35px, 6.5vw, 65px);
+}
+
+.header p {
+    max-width: 780px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #bf3479;
+    font-size: clamp(23px, 4vw, 32px);
+    margin: 35px 0 22px;
+}
+
+.names {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 68px;
+    padding: 16px;
+    border-radius: 17px;
+    background: rgba(255,255,255,.9);
+    border: 1px solid white;
+    box-shadow: 0 5px 18px #c44a8010;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.name:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px #c44a8025;
+}
+
+.heart {
+    color: #e64c91;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.back {
+    text-align: center;
+    margin-top: 32px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #b47b97;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+    .names {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .names {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TRANG 1 -->
+<section id="page1" class="page active">
+    <div class="card">
+        <div class="decor">🌷 💗 🌸</div>
+
+        <div class="subtitle">HAPPY VIETNAMESE WOMEN'S DAY</div>
+
+        <h1>Chúc các bạn gái 10C có một ngày 20/10 vui vẻ! 💐</h1>
+
+        <p>
+            Chúc các bạn luôn xinh tươi, hạnh phúc, học tập thật tốt
+            và mỗi ngày đều tràn ngập tiếng cười.
+            Mong mọi điều tốt đẹp nhất sẽ đến với các bạn! 💕
+        </p>
+
+        <button onclick="openPage('page2')">
+            💌 Nhấn vào đây để mở lời chúc
+        </button>
+
+        <p style="font-size:14px;color:#b47b97">
+            Một món quà nhỏ dành tặng các bạn nữ lớp 10C ✨
+        </p>
+    </div>
+</section>
+
+<!-- TRANG 2 -->
+<section id="page2" class="page">
+    <main class="container">
+
+        <div class="header">
+            <div class="decor">🌸 💖 🌷</div>
+
+            <div class="subtitle">20 THÁNG 10</div>
+
+            <h1>
+                Chúc các bạn gái 10C có một ngày 20/10 thật vui vẻ!
+            </h1>
+
+            <p>
+                Chúc các bạn luôn rạng rỡ, tự tin, hạnh phúc và gặp
+                thật nhiều may mắn. Chúc mỗi người đều đạt được những
+                điều mình mong muốn, học tập thật tốt và luôn giữ nụ
+                cười trên môi. Cảm ơn các bạn vì đã làm cho tập thể
+                10C thêm nhiều màu sắc và kỷ niệm đẹp.
+                Chúc mừng ngày Phụ nữ Việt Nam 20/10! 💗
+            </p>
+        </div>
+
+        <h2>💖 Những bông hoa của lớp 10C 💖</h2>
+
+        <div class="names">
+            <div class="name"><span class="heart">♥</span>Nguyễn Nhật Quỳnh Anh</div>
+            <div class="name"><span class="heart">♥</span>Đỗ Ngọc Hải Anh</div>
+            <div class="name"><span class="heart">♥</span>Lê Quỳnh Anh</div>
+            <div class="name"><span class="heart">♥</span>Dương Quỳnh Anh</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Lan Anh</div>
+            <div class="name"><span class="heart">♥</span>Dương Minh Châu</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Diệp Chi</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Vũ Khánh Chi</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Thùy Dương</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Thanh Hà</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Thúy Hằng</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Ngọc Liên</div>
+            <div class="name"><span class="heart">♥</span>Trần Thùy Linh</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Hoàng Ngân</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Thị Minh Ngọc</div>
+            <div class="name"><span class="heart">♥</span>Đào Ngọc Quỳnh Như</div>
+            <div class="name"><span class="heart">♥</span>Lê Uyển Như</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Hà Phương (A)</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Hà Phương (B)</div>
+            <div class="name"><span class="heart">♥</span>Nguyễn Ngọc KIều Trang</div>
+            <div class="name"><span class="heart">♥</span>Trần Quỳnh Trang</div>
+            <div class="name"><span class="heart">♥</span>Đào Kim Tuyến</div>
+            <div class="name"><span class="heart">♥</span>Trần Lê Thảo Uyên</div>
+            <div class="name"><span class="heart">♥</span>Dương Thị Thảo Vy</div>
+            <div class="name"><span class="heart">♥</span>Trần Thảo Vy</div>
+        </div>
+
+        <div class="back">
+            <button onclick="openPage('page1')">
+                ← Quay lại trang đầu
+            </button>
+        </div>
+
+        <footer>
+            Gửi thật nhiều yêu thương đến các bạn nữ 10C 💗
+        </footer>
+    </main>
+</section>
+
+<script>
+function openPage(id) {
+    document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
